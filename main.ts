@@ -481,7 +481,7 @@ info.onScore(2000, function () {
         . . . . . . . . . . . . . . . . . . . . e . . . . . . 
         . . . . . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 e . . . . . . 
         . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 e e . . . e . 
-        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 e e e e e e e 
+        5 5 5 5 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 e e e e e e e 
         . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 e e . . . e . 
         . . . . . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 e . . . . . . 
         . . . . . . . . . . . . . . . . . . . . e . . . . . . 
@@ -492,9 +492,6 @@ info.onScore(2000, function () {
     Boss_helth.attachToSprite(Boss)
     Boss_helth.max = 420
     Boss_helth.value = 420
-    if (true) {
-    	
-    }
 })
 sprites.onOverlap(SpriteKind.Enymy2, SpriteKind.Player, function (sprite5, otherSprite5) {
     playerHealth.value += -5
@@ -936,34 +933,6 @@ img`
     ..1111111.5555555111111111
     ....1111...155551111111111
     ............1111111111111.
-    `,
-img`
-    ..................fffff...
-    ...............ffff4e44ff.
-    .............fff4e444444ff
-    ............ff44999999999e
-    ...........ff4e49999999994
-    .....fffffff4444999999999e
-    ....ff44e44fff4e9999999994
-    ...f444444444ff49199999914
-    ...f44e4444e44f49111111194
-    ..f44444444444fffff1111194
-    ..f4444e444ffff4e44ff1119e
-    ..f4e44444ff44e44444ff1194
-    ..f444fffff444444e444f1194
-    ..ffff444ff44e44e44e44f19f
-    ..f44444444f44e4444444f19.
-    ..f444e44444f4444444e4f19.
-    .f44444444444f4444e44f119.
-    .f444ee444e444f4e4444f119.
-    f4444444444444f44444ff119.
-    .f444444444444f4444ff4f19.
-    .f4ee4444444444f4ff4e4f19.
-    .f4444e444ee44f4ff4444f19.
-    ..f4444444ee44f4e4e444f19.
-    ...f444444444f444444e4f99.
-    ....ff44444ff44e44444ff...
-    ......fffffffffffffff.....
     `
 ]
 scene.setBackgroundImage(img`
@@ -1158,7 +1127,7 @@ playerHealth.setColor(8, 15)
 playerHealth.setBarBorder(1, 5)
 forever(function () {
     foof = sprites.create(foodList._pickRandom(), SpriteKind.Food)
-    foof.setPosition(randint(0, 160), randint(0, 120))
+    foof.setPosition(randint(0, 120), randint(0, 290))
     pause(2000)
 })
 forever(function () {
